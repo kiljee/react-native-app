@@ -34,10 +34,9 @@ const SignIn = () => {
   const onSubmit = (data: any) => {
     navigation.navigate('SignIn', {...data, image});
   };
-  console.log('aa');
+
   const pressCamera = async () => {
     const {assets} = await launchImageLibrary({mediaType: 'photo'});
-
     setImage(assets?.[0]?.uri);
   };
 
